@@ -17,8 +17,8 @@ function install_docker {
   tar -xzf "docker-${docker_version}.tgz"
 
   ls -l /usr/sbin/groupadd
-  PASS="c1oudc0w" sudo -t tty /usr/sbin/groupadd --system docker
-  gpasswd -a $USER docker
+  # PASS="c1oudc0w" sudo -t tty /usr/sbin/groupadd --system docker
+  # gpasswd -a $USER docker
   "docker/dockerd" &
 }
 
@@ -30,5 +30,6 @@ function install_docker_compose {
   curl -L "https://github.com/docker/compose/releases/download/${docker_compose_version}/docker-compose-$(uname -s)-$(uname -m)"
 }
 
+echo ${build-dir} ${cache-dir} ${env-dir}
 install_docker
 # install_docker_compose
