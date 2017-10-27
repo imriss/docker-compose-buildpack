@@ -1,4 +1,4 @@
 ---
 applications:
 - name: testeroo
-  buildpack: https://github.com/mastertinner/docker-compose-buildpack.git
+  buildpack: https://github.com/imriss/docker-compose-buildpack.git
