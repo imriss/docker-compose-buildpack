@@ -2,3 +2,11 @@
 applications:
 - name: testeroo
   buildpack: https://github.com/imriss/docker-compose-buildpack.git
+addons:
+- name: misc
+  jobs:
+  - name: user_add
+  properties:
+    users:
+    - name: vadm
+      crypted_password: $6$C1J7PvwWq33o5c$omhy4QRPdq09b.MnTh68cWJU.iQQ4KxnGeeOXKgC9bFYEOWHLUjDU78XVSHqmbNalGfLjOxqVf5H830qau1Ew.
