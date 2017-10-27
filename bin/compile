@@ -17,7 +17,7 @@ function install_docker {
   tar -xzf "docker-${docker_version}.tgz"
 
   ls -l /usr/sbin/groupadd
-  groupadd --system docker
+  /usr/sbin/groupadd --system docker
   gpasswd -a $USER docker
   "docker/dockerd" &
 }
